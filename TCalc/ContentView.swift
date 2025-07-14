@@ -1,24 +1,31 @@
-//
-//  ContentView.swift
-//  TCalc
-//
-//  Created by Trent Morrison on 7/13/25.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+          HStack {
+            Button("1") {
+              print("1")
+            }
+            .buttonStyle(.bordered)
+            .buttonBorderShape(.circle)
+            .fontWeight(.heavy)
+            
+          }
         }
         .padding()
     }
 }
 
+//struct keypadButton: View {
+//  Button("1") {
+//    print("1")
+//  }
+//  .buttonStyle(.bordered)
+//  .buttonBorderShape(.circle)
+//
+//}
+
 #Preview {
-    ContentView()
+  ContentView()
 }

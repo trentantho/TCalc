@@ -2,14 +2,14 @@ import SwiftData
 import SwiftUI
 
 @Model
-class SettingsColor {
+class ColorSettings {
   init () {
-    self.colorSelected = "accent"
+    self.selectedColor = "accent"
   }
 
 
   // VARIABLES
-  private var colorSelected: String
+  private var selectedColor: String
 
   @Transient
   private let colorOptions: [String:Color] = ["blue":Color.blue, "red":Color.red, "green":Color.green, "purple":Color.purple]
@@ -17,7 +17,7 @@ class SettingsColor {
 
   // ACCESSORS
   public func getColor() -> Color {
-    if let returnColor = colorOptions[colorSelected] {
+    if let returnColor = colorOptions[selectedColor] {
       return returnColor
     } else {
       print("!!! Cannot get user settings color! Using accent color...")
@@ -28,11 +28,11 @@ class SettingsColor {
 
   //MODIFIERS
   public func changeColor(inputColor: String) {
-    if let returnColor: Color = colorOptions[inputColor] {
-      colorSelected = inputColor
+    if colorOptions.keys.contains(inputColor) {
+      self.selectedColor = inputColor
     } else {
       print("!!! Cannot change user settings color! Using accent color...")
-      colorSelected = "accent"
+      self.selectedColor = "accent"
     }
   }
 }

@@ -1,3 +1,4 @@
+import SwiftData
 import SwiftUI
 
 struct MyScene: Scene {
@@ -8,7 +9,15 @@ struct MyScene: Scene {
           .tabItem {
             Label("Calculator", systemImage: "command")
           }
+
+        SettingsView()
+          .tabItem {
+            Label("Settings", systemImage: "gear")
+          }
       }
+      .modelContainer(for: UserSettings.self)
+
     }
   }
 }
+

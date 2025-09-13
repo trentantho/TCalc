@@ -1,3 +1,4 @@
+import SwiftData
 import SwiftUI
 
 
@@ -27,17 +28,19 @@ struct SettingsView: View {
   @State private var selectedFlavor: Flavor = .chocolate
   @State private var suggestedTopping: Topping = .nuts
 
+  @Environment(\.modelContext) var context
+  
+
+
   var body: some View {
     VStack {
-      Text("Hi, mostly for testing")
+      Text("Hi, for testing")
         .border(.blue)
 
-      List {
-        Picker("Flavor", selection: $selectedFlavor) {
-          Text("Chocolate").tag(Flavor.chocolate)
-          Text("Vanilla").tag(Flavor.vanilla)
-          Text("Strawberry").tag(Flavor.strawberry)
-        }
+      Picker("Flavor", selection: $selectedFlavor) {
+        Text("Chocolate").tag(Flavor.chocolate)
+        Text("Vanilla").tag(Flavor.vanilla)
+        Text("Strawberry").tag(Flavor.strawberry)
       }
 
       List {

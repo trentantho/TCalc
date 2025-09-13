@@ -1,7 +1,9 @@
 import SwiftData
 import SwiftUI
 
-struct MyScene: Scene {
+
+struct iOSScene: Scene {
+  @StateObject var globalSettings = Settings()
   var body: some Scene {
     WindowGroup {
       TabView {
@@ -15,7 +17,6 @@ struct MyScene: Scene {
             Label("Settings", systemImage: "gear")
           }
       }
-      .modelContainer(for: UserSettings.self)
 
     }
   }

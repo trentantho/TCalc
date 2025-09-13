@@ -1,17 +1,15 @@
-import SwiftData
 import SwiftUI
 
-@Model
+
 class ColorSettings {
   init () {
-    self.selectedColor = "accent"
+    self.selectedColor = "blue"
   }
 
 
   // VARIABLES
   private var selectedColor: String
 
-  @Transient
   private let colorOptions: [String:Color] = ["blue":Color.blue, "red":Color.red, "green":Color.green, "purple":Color.purple]
 
 
@@ -20,8 +18,8 @@ class ColorSettings {
     if let returnColor = colorOptions[selectedColor] {
       return returnColor
     } else {
-      print("!!! Cannot get user settings color! Using accent color...")
-      return Color.accentColor
+      print("!!! Cannot get user settings color!")
+      return Color.blue
     }
   }
 
@@ -31,8 +29,8 @@ class ColorSettings {
     if colorOptions.keys.contains(inputColor) {
       self.selectedColor = inputColor
     } else {
-      print("!!! Cannot change user settings color! Using accent color...")
-      self.selectedColor = "accent"
+      print("!!! Cannot change user settings color!")
+      self.selectedColor = "blue"
     }
   }
 }

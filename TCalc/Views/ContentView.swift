@@ -1,13 +1,10 @@
+import SwiftData
 import SwiftUI
 
-enum Operations: String, CaseIterable, Identifiable {
-  case add, subtract, multiply, divide
-  var id: Self { self }
-}
 
 struct ContentView: View {
-  @State private var val = 0.0;
-  @State private var operation: Operations = .add
+  @State private var UserCalculator: Calculator = .init()
+  @EnvironmentObject var globalSettings: Settings
 
   var body: some View {
     VStack {
@@ -16,15 +13,14 @@ struct ContentView: View {
         .font(.largeTitle)
         .padding()
 
-      Text(String(val))
+      Text("fart")
         .font(.largeTitle)
         .frame(alignment: .trailing)
 
-      
       HStack {
-        KeypadButton(value: 1, action: {val += 1})
-        KeypadButton(value: 2, action: {val += 2})
-        KeypadButton(value: 3, action: {val += 3})
+        KeypadButton(value: 1, action: {})
+        KeypadButton(value: 2, action: {})
+        KeypadButton(value: 3, action: {})
       }
       .padding()
 
@@ -44,25 +40,6 @@ struct KeypadButton: View {
         .frame(width: 100, height: 100)
         .foregroundColor(Color.primary)
         .background(Color.secondary.opacity(0.1), in: Circle())
-    }
-  }
-}
-
-struct KeypadButton_Previews: PreviewProvider {
-  static let numbers = [[1, 2, 3],
-                        [4, 5, 6],
-                        [7, 8, 9],
-                        [0]]
-  static var previews: some View {
-    VStack{
-      ForEach(numbers, id: \.self) { row in
-        HStack {
-          ForEach(row, id: \.self) { number in
-            KeypadButton(value: number, action: {})
-              .padding(5)
-          }
-        }
-      }
     }
   }
 }

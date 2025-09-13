@@ -1,15 +1,15 @@
 import SwiftUI
 import SwiftData
 
-@Model
-final class UserSettings {
+
+final class Settings: ObservableObject {
   init() {
     colorSettings = .init()
   }
 
 
   // VARIABLES
-  var colorSettings: ColorSettings
+  @Published var colorSettings: ColorSettings
 
 }
 

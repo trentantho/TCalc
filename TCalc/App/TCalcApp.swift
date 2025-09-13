@@ -1,12 +1,15 @@
 import SwiftUI
 
+
 @main
 struct TCalcApp: App {
+  @EnvironmentObject var globalSettings: Settings
+  
   var body: some Scene {
 #if os(iOS)
-    MyScene()
+    iOSScene()
 #elseif os(macOS)
-    //      MySceneAlt()
+//    macScene()
 #endif
   }
 }

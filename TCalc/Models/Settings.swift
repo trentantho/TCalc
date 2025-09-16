@@ -2,7 +2,7 @@ import SwiftUI
 import SwiftData
 
 
-@Model final class UserSettings: ObservableObject {
+@Model class Settings {
   init(selectedColor: String = "blue") {
     self.selectedColor = selectedColor
     self.createdDate = Date()

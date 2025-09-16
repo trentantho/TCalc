@@ -2,7 +2,7 @@ import SwiftData
 
 
 @Model
-final class CalcBrain {
+final class TCalc {
   init() {
     calcValue = 0.0
   }

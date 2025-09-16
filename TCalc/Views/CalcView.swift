@@ -3,6 +3,9 @@ import SwiftUI
 
 
 struct CalcView: View {
+  @Query var userSettings: [UserSettings]
+  @Environment(\.modelContext) private var context
+  
   var body: some View {
     VStack {
       Text("Main")

@@ -2,9 +2,7 @@ import SwiftUI
 
 
 @main
-struct TCalcApp: App {
-  @EnvironmentObject var globalSettings: Settings
-  
+struct TCalcApp: App {  
   var body: some Scene {
 #if os(iOS)
     iOSScene()

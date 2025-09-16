@@ -1,13 +1,11 @@
 import SwiftData
 import SwiftUI
 
-
 struct iOSScene: Scene {
-  @StateObject var globalSettings = Settings()
   var body: some Scene {
     WindowGroup {
       TabView {
-        ContentView()
+        CalcView()
           .tabItem {
             Label("Calculator", systemImage: "command")
           }
@@ -16,9 +14,13 @@ struct iOSScene: Scene {
           .tabItem {
             Label("Settings", systemImage: "gear")
           }
+
       }
 
     }
+    .modelContainer(for: UserSettings.self)
+
   }
+
 }
 

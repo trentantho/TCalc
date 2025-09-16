@@ -2,10 +2,7 @@ import SwiftData
 import SwiftUI
 
 
-struct ContentView: View {
-  @State private var UserCalculator: Calculator = .init()
-  @EnvironmentObject var globalSettings: Settings
-
+struct CalcView: View {
   var body: some View {
     VStack {
       Text("Main")
@@ -45,5 +42,5 @@ struct KeypadButton: View {
 }
 
 #Preview {
-  ContentView()
+  CalcView()
 }

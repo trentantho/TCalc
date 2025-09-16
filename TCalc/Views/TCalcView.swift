@@ -1,7 +1,6 @@
 import SwiftData
 import SwiftUI
 
-
 struct CalcView: View {
   @Query var globalSettings: [Settings]
   @Environment(\.modelContext) private var context
@@ -10,44 +9,61 @@ struct CalcView: View {
 
   var body: some View {
     VStack {
-      Text(String(mainValue))
-        .labelStyle(.titleAndIcon)
-        .font(.largeTitle)
-        .padding()
+      Button {} label: {
+        Text(String(mainValue))
+          .padding(.horizontal, 48)
+          .padding(.vertical, 32)
+          .font(.largeTitle)
+          .fontWeight(.black)
+          .foregroundColor(.white)
+      }
+      .glassEffect(.regular.tint(.accentColor).interactive())
+      .padding()
 
       VStack {
         HStack {
-          KeypadButton(value: 1)
-          KeypadButton(value: 2)
-          KeypadButton(value: 3)
+          KeypadButton(num: 1, value: $mainValue)
+          KeypadButton(num: 2, value: $mainValue)
+          KeypadButton(num: 3, value: $mainValue)
         }
         HStack {
-          KeypadButton(value: 4)
-          KeypadButton(value: 5)
-          KeypadButton(value: 6)
+          KeypadButton(num: 4, value: $mainValue)
+          KeypadButton(num: 5, value: $mainValue)
+          KeypadButton(num: 6, value: $mainValue)
         }
         HStack {
-          KeypadButton(value: 7)
-          KeypadButton(value: 8)
-          KeypadButton(value: 9)
+          KeypadButton(num: 7, value: $mainValue)
+          KeypadButton(num: 8, value: $mainValue)
+          KeypadButton(num: 9, value: $mainValue)
         }
       }
       .padding()
 
     }
+
   }
 
+
+
   struct KeypadButton: View {
-    let value: Int
-    let onTap: (Int) -> Void
+    let num: Int
+    @Binding var value: Int
 
     var body: some View {
-      Button(String(value)) {
-        addValue(value)
+      Button {
+        value += num
+      } label: {
+        Text(String(num))
+          .font(.title)
+          .padding(32)
+          .foregroundColor(.accentColor.exposureAdjust(-1.0))
+          .fontWeight(.semibold)
       }
-      .font(.largeTitle)
-      .buttonStyle(.glass)
+      .glassEffect(.regular.tint(.accentColor.opacity(0.2)).interactive())
+      .buttonBorderShape(.circle)
+      .padding(8)
     }
+
   }
 
 }

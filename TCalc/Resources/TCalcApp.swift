@@ -1,5 +1,5 @@
 // Created by Trent Morrison, 2025
-// Simple calculator to explore SwiftUI, SwiftData, and Swift in general!
+// Simple calculator to explore SwiftUI, SwiftData, and Swift in general
 
 import SwiftUI
 import SwiftData

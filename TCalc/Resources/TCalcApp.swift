@@ -9,12 +9,12 @@ struct TCalcApp: App {
   var body: some Scene {
     WindowGroup {
       TabView {
-        Tab("Calc", systemImage: "command") {
+        Tab("", systemImage: "command") {
           CalcView()
             .frame(minWidth: 300.0, minHeight: 400.0)
         }
 
-        Tab("Settings", systemImage: "gear") {
+        Tab("", systemImage: "gear") {
           SettingsView()
             .frame(minWidth: 300.0, minHeight: 400.0)
         }

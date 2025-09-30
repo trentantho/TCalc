@@ -1,7 +1,7 @@
 {
   "color-space-for-untagged-svg-colors" : "display-p3",
   "fill" : {
-    "automatic-gradient" : "display-p3:0.77180,0.71896,0.93800,1.00000"
+    "automatic-gradient" : "display-p3:0.44583,0.35500,0.93800,1.00000"
   },
   "groups" : [
     {
@@ -9,10 +9,7 @@
         {
           "blend-mode" : "normal",
           "fill" : {
-            "linear-gradient" : [
-              "display-p3:0.50494,0.54985,1.00000,1.00000",
-              "display-p3:0.48123,0.00297,1.00000,1.00000"
-            ]
+            "solid" : "srgb:1.00000,1.00000,1.00000,1.00000"
           },
           "glass" : true,
           "hidden" : false,
@@ -20,10 +17,10 @@
           "name" : "Untitled_Artwork-1 2",
           "opacity" : 1,
           "position" : {
-            "scale" : 0.1,
+            "scale" : 0.09,
             "translation-in-points" : [
-              0.10823335213990504,
-              0.7620263505678508
+              -2.680829147860095,
+              -7.120786149432149
             ]
           }
         }

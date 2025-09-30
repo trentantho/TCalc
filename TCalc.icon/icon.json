@@ -1,0 +1,47 @@
+{
+  "color-space-for-untagged-svg-colors" : "display-p3",
+  "fill" : {
+    "automatic-gradient" : "display-p3:0.77180,0.71896,0.93800,1.00000"
+  },
+  "groups" : [
+    {
+      "layers" : [
+        {
+          "blend-mode" : "normal",
+          "fill" : {
+            "linear-gradient" : [
+              "display-p3:0.50494,0.54985,1.00000,1.00000",
+              "display-p3:0.48123,0.00297,1.00000,1.00000"
+            ]
+          },
+          "glass" : true,
+          "hidden" : false,
+          "image-name" : "Untitled_Artwork-1 2.png",
+          "name" : "Untitled_Artwork-1 2",
+          "opacity" : 1,
+          "position" : {
+            "scale" : 0.1,
+            "translation-in-points" : [
+              0.10823335213990504,
+              0.7620263505678508
+            ]
+          }
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [
+      "watchOS"
+    ],
+    "squares" : "shared"
+  }
+}
